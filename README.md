@@ -23,3 +23,12 @@ A robust, enterprise-ready PowerShell script that automates the backup of local 
 3. Replace the placeholder `<Your_Folder>` paths in the `$sourceDirs` array with your actual source directories.
 4. Replace `<YOUR_NAS_IP>` and `<YOUR_BACKUP_SHARE>` with your actual NAS UNC path.
 5. Run the script manually or set it up as a Daily Trigger in **Windows Task Scheduler**.
+
+## Featured Script: `Windows-Maintenance-Tool.ps1`
+A comprehensive local system maintenance script that automates routine Windows cleanup, file integrity verification, and image health repair. 
+
+### Key Features:
+* **Auto-Elevation (UAC):** The script automatically detects if it is running with standard user rights and dynamically re-launches itself to request the necessary Administrator privileges.
+* **Smart DISM Integration:** Performs a rapid, non-intrusive `Repair-WindowsImage -CheckHealth` scan. It only triggers the time-consuming `RestoreHealth` deep scan if actual corruption is detected.
+* **System File Checker (SFC):** Integrates standard Windows file integrity checks to find and replace corrupted OS files.
+* **Automated Cleanup:** Safely purges temporary system folders and leftover files to free up disk space and improve local machine performance.
